@@ -1,7 +1,3 @@
-//
-// Created by User on 13.12.2018.
-//
-
 #ifndef QUATERNION_QUATERLIB_H
 #define QUATERNION_QUATERLIB_H
 
@@ -135,7 +131,7 @@ qn::qn(const string &w) {
                 if (pos1 == -1)
                     k = qn(0, 0) - qn(str.substr(1, str.length() - 1));
                 else
-                    k = qn(0, 0) - qn(str.substr(1, static_cast<unsigned int>(pos1))) +
+                    k = qn(0, 0) - qn(str.substr(1, static_cast<unsigned int>(pos1) - 1)) +
                         qn(str.substr(static_cast<unsigned int>(pos1), str.length()));
             }
             else {
